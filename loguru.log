@@ -3278,3 +3278,2256 @@ Stacktrace:
 2023-08-19T11:31:08.380484+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
 2023-08-19T11:31:58.669390+0200 INFO Started listening to verification code email.[MAIN.PY]
 2023-08-19T11:32:03.670109+0200 INFO Found Opus login code: 052851[MAIN.PY]
+2023-08-20T11:43:04.889779+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T11:43:54.023170+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T11:43:59.023895+0200 INFO Found Opus login code: 858870[MAIN.PY]
+2023-08-20T11:49:30.414154+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T11:52:08.896207+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55d728e9d4e3 <unknown>
+#1 0x55d728bccc76 <unknown>
+#2 0x55d728bd9a71 <unknown>
+#3 0x55d728bd16f3 <unknown>
+#4 0x55d728bd01d6 <unknown>
+#5 0x55d728bd297e <unknown>
+#6 0x55d728bd2a4c <unknown>
+#7 0x55d728c0a3c2 <unknown>
+#8 0x55d728bff021 <unknown>
+#9 0x55d728c28012 <unknown>
+#10 0x55d728bfeb03 <unknown>
+#11 0x55d728c281de <unknown>
+#12 0x55d728c4030e <unknown>
+#13 0x55d728c27de3 <unknown>
+#14 0x55d728bfd2dd <unknown>
+#15 0x55d728bfe34e <unknown>
+#16 0x55d728e5d3e4 <unknown>
+#17 0x55d728e613d7 <unknown>
+#18 0x55d728e6bb20 <unknown>
+#19 0x55d728e62023 <unknown>
+#20 0x55d728e301aa <unknown>
+#21 0x55d728e866b8 <unknown>
+#22 0x55d728e86847 <unknown>
+#23 0x55d728e96243 <unknown>
+#24 0x7fc01ee2d609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="7557872d98941d020613525cc99656e9")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f2747bb8d50>
+    └ <function search_for_element_and_click at 0x7f2747b9f1a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f2747c45120>
+    └ <undetected_chromedriver.webelement.WebElement (session="7557872d98941d020613525cc99656e9", element="52B7D701132D809178E73325...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f2747c460c0>
+    └ <undetected_chromedriver.webelement.WebElement (session="7557872d98941d020613525cc99656e9", element="52B7D701132D809178E73325...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': '52B7D701132D809178E7332566FCD745_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f2747c5c9a0>
+           │    └ <undetected_chromedriver.Chrome (session="7557872d98941d020613525cc99656e9")>
+           └ <undetected_chromedriver.webelement.WebElement (session="7557872d98941d020613525cc99656e9", element="52B7D701132D809178E73325...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f2747bfd120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2747b5c090>
+    └ <undetected_chromedriver.Chrome (session="7557872d98941d020613525cc99656e9")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55d728e9d4e3 <unknown>', '#1 0x55d728bccc76 <unknown>', '#2 0x55d728bd9a71 <unknown>', '#3 0x55d728bd16f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55d728e9d4e3 <unknown>
+#1 0x55d728bccc76 <unknown>
+#2 0x55d728bd9a71 <unknown>
+#3 0x55d728bd16f3 <unknown>
+#4 0x55d728bd01d6 <unknown>
+#5 0x55d728bd297e <unknown>
+#6 0x55d728bd2a4c <unknown>
+#7 0x55d728c0a3c2 <unknown>
+#8 0x55d728bff021 <unknown>
+#9 0x55d728c28012 <unknown>
+#10 0x55d728bfeb03 <unknown>
+#11 0x55d728c281de <unknown>
+#12 0x55d728c4030e <unknown>
+#13 0x55d728c27de3 <unknown>
+#14 0x55d728bfd2dd <unknown>
+#15 0x55d728bfe34e <unknown>
+#16 0x55d728e5d3e4 <unknown>
+#17 0x55d728e613d7 <unknown>
+#18 0x55d728e6bb20 <unknown>
+#19 0x55d728e62023 <unknown>
+#20 0x55d728e301aa <unknown>
+#21 0x55d728e866b8 <unknown>
+#22 0x55d728e86847 <unknown>
+#23 0x55d728e96243 <unknown>
+#24 0x7fc01ee2d609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 57, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f2749511e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 47, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T11:52:19.317811+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55eafa5b44e3 <unknown>
+#1 0x55eafa2e3c76 <unknown>
+#2 0x55eafa2f0a71 <unknown>
+#3 0x55eafa2e86f3 <unknown>
+#4 0x55eafa2e71d6 <unknown>
+#5 0x55eafa2e997e <unknown>
+#6 0x55eafa2e9a4c <unknown>
+#7 0x55eafa3213c2 <unknown>
+#8 0x55eafa316021 <unknown>
+#9 0x55eafa33f012 <unknown>
+#10 0x55eafa315b03 <unknown>
+#11 0x55eafa33f1de <unknown>
+#12 0x55eafa35730e <unknown>
+#13 0x55eafa33ede3 <unknown>
+#14 0x55eafa3142dd <unknown>
+#15 0x55eafa31534e <unknown>
+#16 0x55eafa5743e4 <unknown>
+#17 0x55eafa5783d7 <unknown>
+#18 0x55eafa582b20 <unknown>
+#19 0x55eafa579023 <unknown>
+#20 0x55eafa5471aa <unknown>
+#21 0x55eafa59d6b8 <unknown>
+#22 0x55eafa59d847 <unknown>
+#23 0x55eafa5ad243 <unknown>
+#24 0x7fdc86fd9609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="952ec8d1d5f51f83f9fa8c9593159627")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f27474b8150>
+    └ <function search_for_element_and_click at 0x7f2747b9f1a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f2747c45120>
+    └ <undetected_chromedriver.webelement.WebElement (session="952ec8d1d5f51f83f9fa8c9593159627", element="C06F93F53230F69270C26B60...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f2747c460c0>
+    └ <undetected_chromedriver.webelement.WebElement (session="952ec8d1d5f51f83f9fa8c9593159627", element="C06F93F53230F69270C26B60...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': 'C06F93F53230F69270C26B6056E5B7F4_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f2747c5c9a0>
+           │    └ <undetected_chromedriver.Chrome (session="952ec8d1d5f51f83f9fa8c9593159627")>
+           └ <undetected_chromedriver.webelement.WebElement (session="952ec8d1d5f51f83f9fa8c9593159627", element="C06F93F53230F69270C26B60...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f2747bfd120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f274751c7d0>
+    └ <undetected_chromedriver.Chrome (session="952ec8d1d5f51f83f9fa8c9593159627")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55eafa5b44e3 <unknown>', '#1 0x55eafa2e3c76 <unknown>', '#2 0x55eafa2f0a71 <unknown>', '#3 0x55eafa2e86f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55eafa5b44e3 <unknown>
+#1 0x55eafa2e3c76 <unknown>
+#2 0x55eafa2f0a71 <unknown>
+#3 0x55eafa2e86f3 <unknown>
+#4 0x55eafa2e71d6 <unknown>
+#5 0x55eafa2e997e <unknown>
+#6 0x55eafa2e9a4c <unknown>
+#7 0x55eafa3213c2 <unknown>
+#8 0x55eafa316021 <unknown>
+#9 0x55eafa33f012 <unknown>
+#10 0x55eafa315b03 <unknown>
+#11 0x55eafa33f1de <unknown>
+#12 0x55eafa35730e <unknown>
+#13 0x55eafa33ede3 <unknown>
+#14 0x55eafa3142dd <unknown>
+#15 0x55eafa31534e <unknown>
+#16 0x55eafa5743e4 <unknown>
+#17 0x55eafa5783d7 <unknown>
+#18 0x55eafa582b20 <unknown>
+#19 0x55eafa579023 <unknown>
+#20 0x55eafa5471aa <unknown>
+#21 0x55eafa59d6b8 <unknown>
+#22 0x55eafa59d847 <unknown>
+#23 0x55eafa5ad243 <unknown>
+#24 0x7fdc86fd9609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 57, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f2749511e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 47, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T11:52:33.622898+0200 ERROR Main script ended work with exception: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x55fce2dcc4e3 <unknown>
+#1 0x55fce2afbc76 <unknown>
+#2 0x55fce2ad5c6c <unknown>
+#3 0x55fce2b5bf8f <unknown>
+#4 0x55fce2b6ed66 <unknown>
+#5 0x55fce2b56de3 <unknown>
+#6 0x55fce2b2c2dd <unknown>
+#7 0x55fce2b2d34e <unknown>
+#8 0x55fce2d8c3e4 <unknown>
+#9 0x55fce2d903d7 <unknown>
+#10 0x55fce2d9ab20 <unknown>
+#11 0x55fce2d91023 <unknown>
+#12 0x55fce2d5f1aa <unknown>
+#13 0x55fce2db56b8 <unknown>
+#14 0x55fce2db5847 <unknown>
+#15 0x55fce2dc5243 <unknown>
+#16 0x7efc3c91f609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 75, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f2747bb8d50>
+    └ <function search_for_element_and_click at 0x7f2747b9f1a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 27, in search_for_element_and_click
+    element = WebDriverWait(browser, TIMEOUT).until(EC.presence_of_element_located((by, selector)))
+              │             │        │              │  │                            │   └ '//p[text()="Have questions?"]'
+              │             │        │              │  │                            └ 'xpath'
+              │             │        │              │  └ <function presence_of_element_located at 0x7f2747afa160>
+              │             │        │              └ <module 'selenium.webdriver.support.expected_conditions' from '/home/isfluder/.local/lib/python3.11/site-packages/selenium/we...
+              │             │        └ 20
+              │             └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+              └ <class 'selenium.webdriver.support.wait.WebDriverWait'>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+            │      │    └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+            │      └ <selenium.webdriver.support.wait.WebDriverWait (session="bdaf7537f804ce3ebcfeb352316136e4")>
+            └ <function presence_of_element_located.<locals>._predicate at 0x7f2747525300>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 82, in _predicate
+    return driver.find_element(*locator)
+           │      │             └ ('xpath', '//p[text()="Have questions?"]')
+           │      └ <function WebDriver.find_element at 0x7f2747c5dda0>
+           └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '//p[text()="Have questions?"]'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7f2747c5c9a0>
+           └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\nfrom u...
+    │    │             └ <function ErrorHandler.check_response at 0x7f2747bfd120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2747552550>
+    └ <undetected_chromedriver.Chrome (session="bdaf7537f804ce3ebcfeb352316136e4")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55fce2dcc4e3 <unknown>', '#1 0x55fce2afbc76 <unknown>', '#2 0x55fce2ad5c6c <unknown>', '#3 0x55fce2b5bf8f <unknown>', ...
+          │               │        └ None
+          │               └ 'no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.NoSuchWindowException'>
+
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x55fce2dcc4e3 <unknown>
+#1 0x55fce2afbc76 <unknown>
+#2 0x55fce2ad5c6c <unknown>
+#3 0x55fce2b5bf8f <unknown>
+#4 0x55fce2b6ed66 <unknown>
+#5 0x55fce2b56de3 <unknown>
+#6 0x55fce2b2c2dd <unknown>
+#7 0x55fce2b2d34e <unknown>
+#8 0x55fce2d8c3e4 <unknown>
+#9 0x55fce2d903d7 <unknown>
+#10 0x55fce2d9ab20 <unknown>
+#11 0x55fce2d91023 <unknown>
+#12 0x55fce2d5f1aa <unknown>
+#13 0x55fce2db56b8 <unknown>
+#14 0x55fce2db5847 <unknown>
+#15 0x55fce2dc5243 <unknown>
+#16 0x7efc3c91f609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 57, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f2749511e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 47, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T11:56:12.695185+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x557e6da394e3 <unknown>
+#1 0x557e6d768c76 <unknown>
+#2 0x557e6d775a71 <unknown>
+#3 0x557e6d76d6f3 <unknown>
+#4 0x557e6d76c1d6 <unknown>
+#5 0x557e6d76e97e <unknown>
+#6 0x557e6d76ea4c <unknown>
+#7 0x557e6d7a63c2 <unknown>
+#8 0x557e6d79b021 <unknown>
+#9 0x557e6d7c4012 <unknown>
+#10 0x557e6d79ab03 <unknown>
+#11 0x557e6d7c41de <unknown>
+#12 0x557e6d7dc30e <unknown>
+#13 0x557e6d7c3de3 <unknown>
+#14 0x557e6d7992dd <unknown>
+#15 0x557e6d79a34e <unknown>
+#16 0x557e6d9f93e4 <unknown>
+#17 0x557e6d9fd3d7 <unknown>
+#18 0x557e6da07b20 <unknown>
+#19 0x557e6d9fe023 <unknown>
+#20 0x557e6d9cc1aa <unknown>
+#21 0x557e6da226b8 <unknown>
+#22 0x557e6da22847 <unknown>
+#23 0x557e6da32243 <unknown>
+#24 0x7f42e94e3609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="435f54d2fdfae4dd72924bb8734c6f2c")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f841807cb10>
+    └ <function search_for_element_and_click at 0x7f84158531a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f84158f9120>
+    └ <undetected_chromedriver.webelement.WebElement (session="435f54d2fdfae4dd72924bb8734c6f2c", element="D3672B0150985926C650BF45...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f84158fa0c0>
+    └ <undetected_chromedriver.webelement.WebElement (session="435f54d2fdfae4dd72924bb8734c6f2c", element="D3672B0150985926C650BF45...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': 'D3672B0150985926C650BF45D8F7CB42_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f84159109a0>
+           │    └ <undetected_chromedriver.Chrome (session="435f54d2fdfae4dd72924bb8734c6f2c")>
+           └ <undetected_chromedriver.webelement.WebElement (session="435f54d2fdfae4dd72924bb8734c6f2c", element="D3672B0150985926C650BF45...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f84158b1120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f8415810a50>
+    └ <undetected_chromedriver.Chrome (session="435f54d2fdfae4dd72924bb8734c6f2c")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x557e6da394e3 <unknown>', '#1 0x557e6d768c76 <unknown>', '#2 0x557e6d775a71 <unknown>', '#3 0x557e6d76d6f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x557e6da394e3 <unknown>
+#1 0x557e6d768c76 <unknown>
+#2 0x557e6d775a71 <unknown>
+#3 0x557e6d76d6f3 <unknown>
+#4 0x557e6d76c1d6 <unknown>
+#5 0x557e6d76e97e <unknown>
+#6 0x557e6d76ea4c <unknown>
+#7 0x557e6d7a63c2 <unknown>
+#8 0x557e6d79b021 <unknown>
+#9 0x557e6d7c4012 <unknown>
+#10 0x557e6d79ab03 <unknown>
+#11 0x557e6d7c41de <unknown>
+#12 0x557e6d7dc30e <unknown>
+#13 0x557e6d7c3de3 <unknown>
+#14 0x557e6d7992dd <unknown>
+#15 0x557e6d79a34e <unknown>
+#16 0x557e6d9f93e4 <unknown>
+#17 0x557e6d9fd3d7 <unknown>
+#18 0x557e6da07b20 <unknown>
+#19 0x557e6d9fe023 <unknown>
+#20 0x557e6d9cc1aa <unknown>
+#21 0x557e6da226b8 <unknown>
+#22 0x557e6da22847 <unknown>
+#23 0x557e6da32243 <unknown>
+#24 0x7f42e94e3609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f84171c5e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 49, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T11:56:23.908046+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55cdb71aa4e3 <unknown>
+#1 0x55cdb6ed9c76 <unknown>
+#2 0x55cdb6ee6a71 <unknown>
+#3 0x55cdb6ede6f3 <unknown>
+#4 0x55cdb6edd1d6 <unknown>
+#5 0x55cdb6edf97e <unknown>
+#6 0x55cdb6edfa4c <unknown>
+#7 0x55cdb6f173c2 <unknown>
+#8 0x55cdb6f0c021 <unknown>
+#9 0x55cdb6f35012 <unknown>
+#10 0x55cdb6f0bb03 <unknown>
+#11 0x55cdb6f351de <unknown>
+#12 0x55cdb6f4d30e <unknown>
+#13 0x55cdb6f34de3 <unknown>
+#14 0x55cdb6f0a2dd <unknown>
+#15 0x55cdb6f0b34e <unknown>
+#16 0x55cdb716a3e4 <unknown>
+#17 0x55cdb716e3d7 <unknown>
+#18 0x55cdb7178b20 <unknown>
+#19 0x55cdb716f023 <unknown>
+#20 0x55cdb713d1aa <unknown>
+#21 0x55cdb71936b8 <unknown>
+#22 0x55cdb7193847 <unknown>
+#23 0x55cdb71a3243 <unknown>
+#24 0x7f079a90f609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="40e916b19e5869415f64276463ef58df")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f841580bb50>
+    └ <function search_for_element_and_click at 0x7f84158531a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f84158f9120>
+    └ <undetected_chromedriver.webelement.WebElement (session="40e916b19e5869415f64276463ef58df", element="28FCB3E4F32109EEB9066EA4...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f84158fa0c0>
+    └ <undetected_chromedriver.webelement.WebElement (session="40e916b19e5869415f64276463ef58df", element="28FCB3E4F32109EEB9066EA4...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': '28FCB3E4F32109EEB9066EA4BFCC0666_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f84159109a0>
+           │    └ <undetected_chromedriver.Chrome (session="40e916b19e5869415f64276463ef58df")>
+           └ <undetected_chromedriver.webelement.WebElement (session="40e916b19e5869415f64276463ef58df", element="28FCB3E4F32109EEB9066EA4...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f84158b1120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f84151cb850>
+    └ <undetected_chromedriver.Chrome (session="40e916b19e5869415f64276463ef58df")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55cdb71aa4e3 <unknown>', '#1 0x55cdb6ed9c76 <unknown>', '#2 0x55cdb6ee6a71 <unknown>', '#3 0x55cdb6ede6f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55cdb71aa4e3 <unknown>
+#1 0x55cdb6ed9c76 <unknown>
+#2 0x55cdb6ee6a71 <unknown>
+#3 0x55cdb6ede6f3 <unknown>
+#4 0x55cdb6edd1d6 <unknown>
+#5 0x55cdb6edf97e <unknown>
+#6 0x55cdb6edfa4c <unknown>
+#7 0x55cdb6f173c2 <unknown>
+#8 0x55cdb6f0c021 <unknown>
+#9 0x55cdb6f35012 <unknown>
+#10 0x55cdb6f0bb03 <unknown>
+#11 0x55cdb6f351de <unknown>
+#12 0x55cdb6f4d30e <unknown>
+#13 0x55cdb6f34de3 <unknown>
+#14 0x55cdb6f0a2dd <unknown>
+#15 0x55cdb6f0b34e <unknown>
+#16 0x55cdb716a3e4 <unknown>
+#17 0x55cdb716e3d7 <unknown>
+#18 0x55cdb7178b20 <unknown>
+#19 0x55cdb716f023 <unknown>
+#20 0x55cdb713d1aa <unknown>
+#21 0x55cdb71936b8 <unknown>
+#22 0x55cdb7193847 <unknown>
+#23 0x55cdb71a3243 <unknown>
+#24 0x7f079a90f609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f84171c5e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 49, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T11:56:29.807488+0200 ERROR Main script ended work with exception: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x55c3dcd654e3 <unknown>
+#1 0x55c3dca94c76 <unknown>
+#2 0x55c3dca6ec6c <unknown>
+#3 0x55c3dcaf4f8f <unknown>
+#4 0x55c3dcb07d66 <unknown>
+#5 0x55c3dcaefde3 <unknown>
+#6 0x55c3dcac52dd <unknown>
+#7 0x55c3dcac634e <unknown>
+#8 0x55c3dcd253e4 <unknown>
+#9 0x55c3dcd293d7 <unknown>
+#10 0x55c3dcd33b20 <unknown>
+#11 0x55c3dcd2a023 <unknown>
+#12 0x55c3dccf81aa <unknown>
+#13 0x55c3dcd4e6b8 <unknown>
+#14 0x55c3dcd4e847 <unknown>
+#15 0x55c3dcd5e243 <unknown>
+#16 0x7f0c6145c609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="45b32de0146208c036947e3716fcf6b2")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f841807cb10>
+    └ <function search_for_element_and_click at 0x7f84158531a0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f84158f9120>
+    └ <undetected_chromedriver.webelement.WebElement (session="45b32de0146208c036947e3716fcf6b2", element="AB7E9A533DD873F2F927091D...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f84158fa0c0>
+    └ <undetected_chromedriver.webelement.WebElement (session="45b32de0146208c036947e3716fcf6b2", element="AB7E9A533DD873F2F927091D...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': 'AB7E9A533DD873F2F927091D7A254047_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f84159109a0>
+           │    └ <undetected_chromedriver.Chrome (session="45b32de0146208c036947e3716fcf6b2")>
+           └ <undetected_chromedriver.webelement.WebElement (session="45b32de0146208c036947e3716fcf6b2", element="AB7E9A533DD873F2F927091D...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\nfrom u...
+    │    │             └ <function ErrorHandler.check_response at 0x7f84158b1120>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f8415206510>
+    └ <undetected_chromedriver.Chrome (session="45b32de0146208c036947e3716fcf6b2")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55c3dcd654e3 <unknown>', '#1 0x55c3dca94c76 <unknown>', '#2 0x55c3dca6ec6c <unknown>', '#3 0x55c3dcaf4f8f <unknown>', ...
+          │               │        └ None
+          │               └ 'no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.NoSuchWindowException'>
+
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x55c3dcd654e3 <unknown>
+#1 0x55c3dca94c76 <unknown>
+#2 0x55c3dca6ec6c <unknown>
+#3 0x55c3dcaf4f8f <unknown>
+#4 0x55c3dcb07d66 <unknown>
+#5 0x55c3dcaefde3 <unknown>
+#6 0x55c3dcac52dd <unknown>
+#7 0x55c3dcac634e <unknown>
+#8 0x55c3dcd253e4 <unknown>
+#9 0x55c3dcd293d7 <unknown>
+#10 0x55c3dcd33b20 <unknown>
+#11 0x55c3dcd2a023 <unknown>
+#12 0x55c3dccf81aa <unknown>
+#13 0x55c3dcd4e6b8 <unknown>
+#14 0x55c3dcd4e847 <unknown>
+#15 0x55c3dcd5e243 <unknown>
+#16 0x7f0c6145c609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f84171c5e40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 49, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T12:00:48.564189+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fa670904e3 <unknown>
+#1 0x55fa66dbfc76 <unknown>
+#2 0x55fa66dcca71 <unknown>
+#3 0x55fa66dc46f3 <unknown>
+#4 0x55fa66dc31d6 <unknown>
+#5 0x55fa66dc597e <unknown>
+#6 0x55fa66dc5a4c <unknown>
+#7 0x55fa66dfd3c2 <unknown>
+#8 0x55fa66df2021 <unknown>
+#9 0x55fa66e1b012 <unknown>
+#10 0x55fa66df1b03 <unknown>
+#11 0x55fa66e1b1de <unknown>
+#12 0x55fa66e3330e <unknown>
+#13 0x55fa66e1ade3 <unknown>
+#14 0x55fa66df02dd <unknown>
+#15 0x55fa66df134e <unknown>
+#16 0x55fa670503e4 <unknown>
+#17 0x55fa670543d7 <unknown>
+#18 0x55fa6705eb20 <unknown>
+#19 0x55fa67055023 <unknown>
+#20 0x55fa670231aa <unknown>
+#21 0x55fa670796b8 <unknown>
+#22 0x55fa67079847 <unknown>
+#23 0x55fa67089243 <unknown>
+#24 0x7f7d41b58609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="4c11e76ce6c9c5707caf1a9af2cf67b5")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f103ef77950>
+    └ <function search_for_element_and_click at 0x7f1057e9e8e0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f103f0c80e0>
+    └ <undetected_chromedriver.webelement.WebElement (session="4c11e76ce6c9c5707caf1a9af2cf67b5", element="7E1386C15D3D26494FD8A441...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f103f0c9080>
+    └ <undetected_chromedriver.webelement.WebElement (session="4c11e76ce6c9c5707caf1a9af2cf67b5", element="7E1386C15D3D26494FD8A441...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': '7E1386C15D3D26494FD8A441261CA597_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f103f0cbc40>
+           │    └ <undetected_chromedriver.Chrome (session="4c11e76ce6c9c5707caf1a9af2cf67b5")>
+           └ <undetected_chromedriver.webelement.WebElement (session="4c11e76ce6c9c5707caf1a9af2cf67b5", element="7E1386C15D3D26494FD8A441...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f103f047420>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f103e9e9610>
+    └ <undetected_chromedriver.Chrome (session="4c11e76ce6c9c5707caf1a9af2cf67b5")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55fa670904e3 <unknown>', '#1 0x55fa66dbfc76 <unknown>', '#2 0x55fa66dcca71 <unknown>', '#3 0x55fa66dc46f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fa670904e3 <unknown>
+#1 0x55fa66dbfc76 <unknown>
+#2 0x55fa66dcca71 <unknown>
+#3 0x55fa66dc46f3 <unknown>
+#4 0x55fa66dc31d6 <unknown>
+#5 0x55fa66dc597e <unknown>
+#6 0x55fa66dc5a4c <unknown>
+#7 0x55fa66dfd3c2 <unknown>
+#8 0x55fa66df2021 <unknown>
+#9 0x55fa66e1b012 <unknown>
+#10 0x55fa66df1b03 <unknown>
+#11 0x55fa66e1b1de <unknown>
+#12 0x55fa66e3330e <unknown>
+#13 0x55fa66e1ade3 <unknown>
+#14 0x55fa66df02dd <unknown>
+#15 0x55fa66df134e <unknown>
+#16 0x55fa670503e4 <unknown>
+#17 0x55fa670543d7 <unknown>
+#18 0x55fa6705eb20 <unknown>
+#19 0x55fa67055023 <unknown>
+#20 0x55fa670231aa <unknown>
+#21 0x55fa670796b8 <unknown>
+#22 0x55fa67079847 <unknown>
+#23 0x55fa67089243 <unknown>
+#24 0x7f7d41b58609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f10592749d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f105907a8e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f10592749d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f1057e86020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f1057e85da0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f10581309a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f10580f4eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f10581305e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f10580f4eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f1058130180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f10580f4eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f1054af8a40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 49, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T12:02:46.458264+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x5582018f04e3 <unknown>
+#1 0x55820161fc76 <unknown>
+#2 0x55820162ca71 <unknown>
+#3 0x5582016246f3 <unknown>
+#4 0x5582016231d6 <unknown>
+#5 0x55820162597e <unknown>
+#6 0x558201625a4c <unknown>
+#7 0x55820165d3c2 <unknown>
+#8 0x558201652021 <unknown>
+#9 0x55820167b012 <unknown>
+#10 0x558201651b03 <unknown>
+#11 0x55820167b1de <unknown>
+#12 0x55820169330e <unknown>
+#13 0x55820167ade3 <unknown>
+#14 0x5582016502dd <unknown>
+#15 0x55820165134e <unknown>
+#16 0x5582018b03e4 <unknown>
+#17 0x5582018b43d7 <unknown>
+#18 0x5582018beb20 <unknown>
+#19 0x5582018b5023 <unknown>
+#20 0x5582018831aa <unknown>
+#21 0x5582018d96b8 <unknown>
+#22 0x5582018d9847 <unknown>
+#23 0x5582018e9243 <unknown>
+#24 0x7f57a97fa609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 24, in run
+    fetcher = opus_fetcher.Fetcher()
+              │            └ <class 'opus_fetcher.Fetcher'>
+              └ <module 'opus_fetcher' from '/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py'>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 73, in __init__
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="059af4599ac6679698744230cab9df00")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f5fc8280510>
+    └ <function search_for_element_and_click at 0x7f5fd127a8e0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 29, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f5fc85280e0>
+    └ <undetected_chromedriver.webelement.WebElement (session="059af4599ac6679698744230cab9df00", element="4DD7DD8098EBBB3BBC4CE95E...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f5fc8529080>
+    └ <undetected_chromedriver.webelement.WebElement (session="059af4599ac6679698744230cab9df00", element="4DD7DD8098EBBB3BBC4CE95E...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': '4DD7DD8098EBBB3BBC4CE95E7D3F55A4_element_5'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f5fc852bc40>
+           │    └ <undetected_chromedriver.Chrome (session="059af4599ac6679698744230cab9df00")>
+           └ <undetected_chromedriver.webelement.WebElement (session="059af4599ac6679698744230cab9df00", element="4DD7DD8098EBBB3BBC4CE95E...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f5fc84a7420>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f5fc8344590>
+    └ <undetected_chromedriver.Chrome (session="059af4599ac6679698744230cab9df00")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x5582018f04e3 <unknown>', '#1 0x55820161fc76 <unknown>', '#2 0x55820162ca71 <unknown>', '#3 0x5582016246f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x5582018f04e3 <unknown>
+#1 0x55820161fc76 <unknown>
+#2 0x55820162ca71 <unknown>
+#3 0x5582016246f3 <unknown>
+#4 0x5582016231d6 <unknown>
+#5 0x55820162597e <unknown>
+#6 0x558201625a4c <unknown>
+#7 0x55820165d3c2 <unknown>
+#8 0x558201652021 <unknown>
+#9 0x55820167b012 <unknown>
+#10 0x558201651b03 <unknown>
+#11 0x55820167b1de <unknown>
+#12 0x55820169330e <unknown>
+#13 0x55820167ade3 <unknown>
+#14 0x5582016502dd <unknown>
+#15 0x55820165134e <unknown>
+#16 0x5582018b03e4 <unknown>
+#17 0x5582018b43d7 <unknown>
+#18 0x5582018beb20 <unknown>
+#19 0x5582018b5023 <unknown>
+#20 0x5582018831aa <unknown>
+#21 0x5582018d96b8 <unknown>
+#22 0x5582018d9847 <unknown>
+#23 0x5582018e9243 <unknown>
+#24 0x7f57a97fa609 start_thread
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f5fd26509d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f5fd24568e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f5fd26509d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f5fd1262020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f5fd1261da0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f5fd150c9a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f5fd14d0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f5fd150c5e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f5fd14d0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f5fd150c180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f5fd14d0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f5fc9ec8a40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 49, in run
+    if fetcher.wish != None:
+
+UnboundLocalError: cannot access local variable 'fetcher' where it is not associated with a value
+2023-08-20T12:04:28.206894+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:04:40.529074+0200 ERROR Main script ended work with exception: 'Fetcher' object has no attribute 'proxy'[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f2b270409d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f2b26e468e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f2b270409d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f2b25c52020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f2b25c51da0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f2b25efc9a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f2b25ec0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f2b25efc5e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f2b25ec0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f2b25efc180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f2b25ec0eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f2b1680ca40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f2b147f0ae0>
+    └ <opus_fetcher.Fetcher object at 0x7f2b147651d0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 139, in download_videos
+    self.opt.add_argument("--proxy-server="+self.proxy)
+    │    │   │                              └ <opus_fetcher.Fetcher object at 0x7f2b147651d0>
+    │    │   └ <function ArgOptions.add_argument at 0x7f2b14e94040>
+    │    └ <selenium.webdriver.chrome.options.Options object at 0x7f2b14753bd0>
+    └ <opus_fetcher.Fetcher object at 0x7f2b147651d0>
+
+AttributeError: 'Fetcher' object has no attribute 'proxy'
+2023-08-20T12:07:04.453259+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:07:18.803721+0200 ERROR Main script ended work with exception: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x562af4c664e3 <unknown>
+#1 0x562af4995c76 <unknown>
+#2 0x562af496fc6c <unknown>
+#3 0x562af49f5f8f <unknown>
+#4 0x562af4a08d66 <unknown>
+#5 0x562af49f0de3 <unknown>
+#6 0x562af49c62dd <unknown>
+#7 0x562af49c734e <unknown>
+#8 0x562af4c263e4 <unknown>
+#9 0x562af4c2a3d7 <unknown>
+#10 0x562af4c34b20 <unknown>
+#11 0x562af4c2b023 <unknown>
+#12 0x562af4bf91aa <unknown>
+#13 0x562af4c4f6b8 <unknown>
+#14 0x562af4c4f847 <unknown>
+#15 0x562af4c5f243 <unknown>
+#16 0x7fbbbbd0a609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f40414789d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f404127e8e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f40414789d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f404008a020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f4040089da0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f40403349a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f40402f8eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f40403345e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f40402f8eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f4040334180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f40402f8eb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 60, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f403cce8a40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 39, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f4026ba0c20>
+    └ <opus_fetcher.Fetcher object at 0x7f40271f0190>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 146, in download_videos
+    search_for_element_and_click(self.driver, By.XPATH, '//p[text()="Have questions?"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f40271f0190>
+    └ <function search_for_element_and_click at 0x7f40275d0b80>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 27, in search_for_element_and_click
+    element = WebDriverWait(browser, TIMEOUT).until(EC.presence_of_element_located((by, selector)))
+              │             │        │              │  │                            │   └ '//p[text()="Have questions?"]'
+              │             │        │              │  │                            └ 'xpath'
+              │             │        │              │  └ <function presence_of_element_located at 0x7f40271a8040>
+              │             │        │              └ <module 'selenium.webdriver.support.expected_conditions' from '/home/isfluder/.local/lib/python3.11/site-packages/selenium/we...
+              │             │        └ 20
+              │             └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+              └ <class 'selenium.webdriver.support.wait.WebDriverWait'>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+            │      │    └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+            │      └ <selenium.webdriver.support.wait.WebDriverWait (session="1004b2cfa406dda064e074c5b07e6864")>
+            └ <function presence_of_element_located.<locals>._predicate at 0x7f4026ba1300>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 82, in _predicate
+    return driver.find_element(*locator)
+           │      │             └ ('xpath', '//p[text()="Have questions?"]')
+           │      └ <function WebDriver.find_element at 0x7f40272d5120>
+           └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '//p[text()="Have questions?"]'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7f40272cbce0>
+           └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\nfrom u...
+    │    │             └ <function ErrorHandler.check_response at 0x7f40272474c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f4026a17610>
+    └ <undetected_chromedriver.Chrome (session="1004b2cfa406dda064e074c5b07e6864")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x562af4c664e3 <unknown>', '#1 0x562af4995c76 <unknown>', '#2 0x562af496fc6c <unknown>', '#3 0x562af49f5f8f <unknown>', ...
+          │               │        └ None
+          │               └ 'no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.NoSuchWindowException'>
+
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x562af4c664e3 <unknown>
+#1 0x562af4995c76 <unknown>
+#2 0x562af496fc6c <unknown>
+#3 0x562af49f5f8f <unknown>
+#4 0x562af4a08d66 <unknown>
+#5 0x562af49f0de3 <unknown>
+#6 0x562af49c62dd <unknown>
+#7 0x562af49c734e <unknown>
+#8 0x562af4c263e4 <unknown>
+#9 0x562af4c2a3d7 <unknown>
+#10 0x562af4c34b20 <unknown>
+#11 0x562af4c2b023 <unknown>
+#12 0x562af4bf91aa <unknown>
+#13 0x562af4c4f6b8 <unknown>
+#14 0x562af4c4f847 <unknown>
+#15 0x562af4c5f243 <unknown>
+#16 0x7fbbbbd0a609 start_thread
+
+2023-08-20T12:11:19.172342+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:12:19.644571+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:12:24.645644+0200 INFO Found Opus login code: 187889[MAIN.PY]
+2023-08-20T12:18:07.582732+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:18:58.621205+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:19:03.622257+0200 INFO Found Opus login code: 515289[MAIN.PY]
+2023-08-20T12:19:49.683367+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55dcf3f304e3 <unknown>
+#1 0x55dcf3c5fc76 <unknown>
+#2 0x55dcf3c6ca71 <unknown>
+#3 0x55dcf3c646f3 <unknown>
+#4 0x55dcf3c631d6 <unknown>
+#5 0x55dcf3c6597e <unknown>
+#6 0x55dcf3c65a4c <unknown>
+#7 0x55dcf3c9c7c9 <unknown>
+#8 0x55dcf3c9c855 <unknown>
+#9 0x55dcf3c94744 <unknown>
+#10 0x55dcf3cbb012 <unknown>
+#11 0x55dcf3c91b03 <unknown>
+#12 0x55dcf3cbb1de <unknown>
+#13 0x55dcf3cd330e <unknown>
+#14 0x55dcf3cbade3 <unknown>
+#15 0x55dcf3c902dd <unknown>
+#16 0x55dcf3c9134e <unknown>
+#17 0x55dcf3ef03e4 <unknown>
+#18 0x55dcf3ef43d7 <unknown>
+#19 0x55dcf3efeb20 <unknown>
+#20 0x55dcf3ef5023 <unknown>
+#21 0x55dcf3ec31aa <unknown>
+#22 0x55dcf3f196b8 <unknown>
+#23 0x55dcf3f19847 <unknown>
+#24 0x55dcf3f29243 <unknown>
+#25 0x7fc25abef609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f569aac89d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f569a8d28e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f569aac89d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f56996de020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f56996ddda0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f56999889a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f569994ceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f56999885e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f569994ceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f5699988180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f569994ceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f56922dca40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f5690280c20>
+    └ <opus_fetcher.Fetcher object at 0x7f5690272f10>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 192, in download_videos
+    page.send_keys(Keys.PAGE_DOWN)
+    │    │         │    └ '\ue00f'
+    │    │         └ <class 'selenium.webdriver.common.keys.Keys'>
+    │    └ <function WebElement.send_keys at 0x7f56909a8680>
+    └ <undetected_chromedriver.webelement.WebElement (session="65a72a4a3db9729ee9c71170025fdd56", element="1749627E7AC696B282564406...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+    │    └ <function WebElement._execute at 0x7f56909a9120>
+    └ <undetected_chromedriver.webelement.WebElement (session="65a72a4a3db9729ee9c71170025fdd56", element="1749627E7AC696B282564406...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'text': '\ue00f', 'value': ['\ue00f'], 'id': '1749627E7AC696B282564406C3CB2AAA_element_22'}
+           │    │       │       └ 'sendKeysToElement'
+           │    │       └ <function WebDriver.execute at 0x7f56909abce0>
+           │    └ <undetected_chromedriver.Chrome (session="65a72a4a3db9729ee9c71170025fdd56")>
+           └ <undetected_chromedriver.webelement.WebElement (session="65a72a4a3db9729ee9c71170025fdd56", element="1749627E7AC696B282564406...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f56909274c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f56900f71d0>
+    └ <undetected_chromedriver.Chrome (session="65a72a4a3db9729ee9c71170025fdd56")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55dcf3f304e3 <unknown>', '#1 0x55dcf3c5fc76 <unknown>', '#2 0x55dcf3c6ca71 <unknown>', '#3 0x55dcf3c646f3 <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55dcf3f304e3 <unknown>
+#1 0x55dcf3c5fc76 <unknown>
+#2 0x55dcf3c6ca71 <unknown>
+#3 0x55dcf3c646f3 <unknown>
+#4 0x55dcf3c631d6 <unknown>
+#5 0x55dcf3c6597e <unknown>
+#6 0x55dcf3c65a4c <unknown>
+#7 0x55dcf3c9c7c9 <unknown>
+#8 0x55dcf3c9c855 <unknown>
+#9 0x55dcf3c94744 <unknown>
+#10 0x55dcf3cbb012 <unknown>
+#11 0x55dcf3c91b03 <unknown>
+#12 0x55dcf3cbb1de <unknown>
+#13 0x55dcf3cd330e <unknown>
+#14 0x55dcf3cbade3 <unknown>
+#15 0x55dcf3c902dd <unknown>
+#16 0x55dcf3c9134e <unknown>
+#17 0x55dcf3ef03e4 <unknown>
+#18 0x55dcf3ef43d7 <unknown>
+#19 0x55dcf3efeb20 <unknown>
+#20 0x55dcf3ef5023 <unknown>
+#21 0x55dcf3ec31aa <unknown>
+#22 0x55dcf3f196b8 <unknown>
+#23 0x55dcf3f19847 <unknown>
+#24 0x55dcf3f29243 <unknown>
+#25 0x7fc25abef609 start_thread
+
+2023-08-20T12:22:29.165190+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:23:02.872184+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x559ebc7a94e3 <unknown>
+#1 0x559ebc4d8c76 <unknown>
+#2 0x559ebc4dd53c <unknown>
+#3 0x559ebc4de97e <unknown>
+#4 0x559ebc4dea4c <unknown>
+#5 0x559ebc5163c2 <unknown>
+#6 0x559ebc50b021 <unknown>
+#7 0x559ebc534012 <unknown>
+#8 0x559ebc50ab03 <unknown>
+#9 0x559ebc5341de <unknown>
+#10 0x559ebc54c30e <unknown>
+#11 0x559ebc533de3 <unknown>
+#12 0x559ebc5092dd <unknown>
+#13 0x559ebc50a34e <unknown>
+#14 0x559ebc7693e4 <unknown>
+#15 0x559ebc76d3d7 <unknown>
+#16 0x559ebc777b20 <unknown>
+#17 0x559ebc76e023 <unknown>
+#18 0x559ebc73c1aa <unknown>
+#19 0x559ebc7926b8 <unknown>
+#20 0x559ebc792847 <unknown>
+#21 0x559ebc7a2243 <unknown>
+#22 0x7f5353923609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.11/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f88c3b749d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+           └ <function _run_code at 0x7f88c397a8e0>
+  File "/usr/lib/python3.11/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f88c3b749d0, file "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/p...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f88c2766020>
+    └ <module 'debugpy.server.cli' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugp...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f88c2765da0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/isfluder/Desktop/automated-yt-upload/sequence.py'
+    │     └ <function run_path at 0x7f88c2a1c9a0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/pyth...
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f88c29dceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+           └ <function _run_module_code at 0x7f88c2a1c5e0>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+    │         └ <code object <module> at 0x7f88c29dceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+    └ <function _run_code at 0x7f88c2a1c180>
+
+  File "/home/isfluder/.vscode/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/isflude...
+         └ <code object <module> at 0x7f88c29dceb0, file "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 1>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 59, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f88b33b8a40>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f88b1304c20>
+    └ <opus_fetcher.Fetcher object at 0x7f88b1294190>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 160, in download_videos
+    search_for_element_and_click(self.driver, By.XPATH, '//button[text()="Download"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="47e763a732aad6a9e1ef2b98aa9841b3")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7f88b1294190>
+    └ <function search_for_element_and_click at 0x7f88b1d38b80>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 30, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7f88b1a2c180>
+    └ <undetected_chromedriver.webelement.WebElement (session="47e763a732aad6a9e1ef2b98aa9841b3", element="E18A37D11D152E6E6B228BB8...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7f88b1a2d120>
+    └ <undetected_chromedriver.webelement.WebElement (session="47e763a732aad6a9e1ef2b98aa9841b3", element="E18A37D11D152E6E6B228BB8...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': 'E18A37D11D152E6E6B228BB882236068_element_18'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7f88b1a2fce0>
+           │    └ <undetected_chromedriver.Chrome (session="47e763a732aad6a9e1ef2b98aa9841b3")>
+           └ <undetected_chromedriver.webelement.WebElement (session="47e763a732aad6a9e1ef2b98aa9841b3", element="E18A37D11D152E6E6B228BB8...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7f88b19ab4c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f88b1375590>
+    └ <undetected_chromedriver.Chrome (session="47e763a732aad6a9e1ef2b98aa9841b3")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x559ebc7a94e3 <unknown>', '#1 0x559ebc4d8c76 <unknown>', '#2 0x559ebc4dd53c <unknown>', '#3 0x559ebc4de97e <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x559ebc7a94e3 <unknown>
+#1 0x559ebc4d8c76 <unknown>
+#2 0x559ebc4dd53c <unknown>
+#3 0x559ebc4de97e <unknown>
+#4 0x559ebc4dea4c <unknown>
+#5 0x559ebc5163c2 <unknown>
+#6 0x559ebc50b021 <unknown>
+#7 0x559ebc534012 <unknown>
+#8 0x559ebc50ab03 <unknown>
+#9 0x559ebc5341de <unknown>
+#10 0x559ebc54c30e <unknown>
+#11 0x559ebc533de3 <unknown>
+#12 0x559ebc5092dd <unknown>
+#13 0x559ebc50a34e <unknown>
+#14 0x559ebc7693e4 <unknown>
+#15 0x559ebc76d3d7 <unknown>
+#16 0x559ebc777b20 <unknown>
+#17 0x559ebc76e023 <unknown>
+#18 0x559ebc73c1aa <unknown>
+#19 0x559ebc7926b8 <unknown>
+#20 0x559ebc792847 <unknown>
+#21 0x559ebc7a2243 <unknown>
+#22 0x7f5353923609 start_thread
+
+2023-08-20T12:28:37.017334+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:29:30.985391+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:29:35.986383+0200 INFO Found Opus login code: 850267[MAIN.PY]
+2023-08-20T12:33:20.730544+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:34:29.614783+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:35:41.524523+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:36:15.980250+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:36:37.313391+0200 WARNING Interrupted[MAIN.PY]
+2023-08-20T12:36:37.318820+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:36:48.088547+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:36:48.089279+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:37:14.583571+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:38:12.399709+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:38:17.400452+0200 INFO Found Opus login code: 743369[MAIN.PY]
+2023-08-20T12:39:22.405434+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:39:22.410258+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:43:23.388398+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:44:22.281965+0200 ERROR Main script ended work with exception: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x558942afb4e3 <unknown>
+#1 0x55894282ac76 <unknown>
+#2 0x55894282f53c <unknown>
+#3 0x55894283097e <unknown>
+#4 0x558942830a4c <unknown>
+#5 0x5589428683c2 <unknown>
+#6 0x55894285d021 <unknown>
+#7 0x558942886012 <unknown>
+#8 0x55894285cb03 <unknown>
+#9 0x5589428861de <unknown>
+#10 0x55894289e30e <unknown>
+#11 0x558942885de3 <unknown>
+#12 0x55894285b2dd <unknown>
+#13 0x55894285c34e <unknown>
+#14 0x558942abb3e4 <unknown>
+#15 0x558942abf3d7 <unknown>
+#16 0x558942ac9b20 <unknown>
+#17 0x558942ac0023 <unknown>
+#18 0x558942a8e1aa <unknown>
+#19 0x558942ae46b8 <unknown>
+#20 0x558942ae4847 <unknown>
+#21 0x558942af4243 <unknown>
+#22 0x7f5226f51609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fe38eefdda0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fe38d4185e0>
+    └ <opus_fetcher.Fetcher object at 0x7fe38d4158d0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 161, in download_videos
+    search_for_element_and_click(self.driver, By.XPATH, '//button[text()="Download"]')
+    │                            │    │       │  └ 'xpath'
+    │                            │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                            │    └ <undetected_chromedriver.Chrome (session="f8783ef382472bc4936d8e759ca1458d")>
+    │                            └ <opus_fetcher.Fetcher object at 0x7fe38d4158d0>
+    └ <function search_for_element_and_click at 0x7fe38d5e0180>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 31, in search_for_element_and_click
+    element.click()
+    │       └ <function WebElement.click at 0x7fe38d651260>
+    └ <undetected_chromedriver.webelement.WebElement (session="f8783ef382472bc4936d8e759ca1458d", element="F26BC2A56B097385A2A7227C...
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x7fe38d652200>
+    └ <undetected_chromedriver.webelement.WebElement (session="f8783ef382472bc4936d8e759ca1458d", element="F26BC2A56B097385A2A7227C...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': 'F26BC2A56B097385A2A7227C0E0687B3_element_20'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x7fe38d478ae0>
+           │    └ <undetected_chromedriver.Chrome (session="f8783ef382472bc4936d8e759ca1458d")>
+           └ <undetected_chromedriver.webelement.WebElement (session="f8783ef382472bc4936d8e759ca1458d", element="F26BC2A56B097385A2A7227C...
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale element not f...
+    │    │             └ <function ErrorHandler.check_response at 0x7fe38d611260>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fe38d42ce10>
+    └ <undetected_chromedriver.Chrome (session="f8783ef382472bc4936d8e759ca1458d")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x558942afb4e3 <unknown>', '#1 0x55894282ac76 <unknown>', '#2 0x55894282f53c <unknown>', '#3 0x55894283097e <unknown>', ...
+          │               │        └ None
+          │               └ 'stale element reference: stale element not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x558942afb4e3 <unknown>
+#1 0x55894282ac76 <unknown>
+#2 0x55894282f53c <unknown>
+#3 0x55894283097e <unknown>
+#4 0x558942830a4c <unknown>
+#5 0x5589428683c2 <unknown>
+#6 0x55894285d021 <unknown>
+#7 0x558942886012 <unknown>
+#8 0x55894285cb03 <unknown>
+#9 0x5589428861de <unknown>
+#10 0x55894289e30e <unknown>
+#11 0x558942885de3 <unknown>
+#12 0x55894285b2dd <unknown>
+#13 0x55894285c34e <unknown>
+#14 0x558942abb3e4 <unknown>
+#15 0x558942abf3d7 <unknown>
+#16 0x558942ac9b20 <unknown>
+#17 0x558942ac0023 <unknown>
+#18 0x558942a8e1aa <unknown>
+#19 0x558942ae46b8 <unknown>
+#20 0x558942ae4847 <unknown>
+#21 0x558942af4243 <unknown>
+#22 0x7f5226f51609 start_thread
+
+2023-08-20T12:44:37.038462+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:45:28.766292+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:45:33.767068+0200 INFO Found Opus login code: 653086[MAIN.PY]
+2023-08-20T12:45:35.772952+0200 ERROR Main script ended work with exception: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x5630e09714e3 <unknown>
+#1 0x5630e06a0c76 <unknown>
+#2 0x5630e067ac6c <unknown>
+#3 0x5630e0700f8f <unknown>
+#4 0x5630e0713d66 <unknown>
+#5 0x5630e06fbde3 <unknown>
+#6 0x5630e06d12dd <unknown>
+#7 0x5630e06d234e <unknown>
+#8 0x5630e09313e4 <unknown>
+#9 0x5630e09353d7 <unknown>
+#10 0x5630e093fb20 <unknown>
+#11 0x5630e0936023 <unknown>
+#12 0x5630e09041aa <unknown>
+#13 0x5630e095a6b8 <unknown>
+#14 0x5630e095a847 <unknown>
+#15 0x5630e096a243 <unknown>
+#16 0x7f96a79dc609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fe38eefdda0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fe38d4185e0>
+    └ <opus_fetcher.Fetcher object at 0x7fe38d4f9a10>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 173, in download_videos
+    search_for_element_and_send_keys(self.driver, By.ID, ':r3:', code)
+    │                                │    │       │  │           └ '653086'
+    │                                │    │       │  └ 'id'
+    │                                │    │       └ <class 'selenium.webdriver.common.by.By'>
+    │                                │    └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+    │                                └ <opus_fetcher.Fetcher object at 0x7fe38d4f9a10>
+    └ <function search_for_element_and_send_keys at 0x7fe38d513880>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 42, in search_for_element_and_send_keys
+    element = WebDriverWait(browser, TIMEOUT, ignored_exceptions=resources.IGNORED_EXCEPTIONS).until(EC.presence_of_element_located((by, selector)))
+              │             │        │                           │         │                         │  │                            │   └ ':r3:'
+              │             │        │                           │         │                         │  │                            └ 'id'
+              │             │        │                           │         │                         │  └ <function presence_of_element_located at 0x7fe38d5122a0>
+              │             │        │                           │         │                         └ <module 'selenium.webdriver.support.expected_conditions' from '/home/isfluder/.local/lib/python3.11/site-packages/selenium/we...
+              │             │        │                           │         └ (<class 'selenium.common.exceptions.NoSuchElementException'>, <class 'selenium.common.exceptions.StaleElementReferenceExcepti...
+              │             │        │                           └ <module 'resources' from '/home/isfluder/Desktop/automated-yt-upload/resources.py'>
+              │             │        └ 20
+              │             └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+              └ <class 'selenium.webdriver.support.wait.WebDriverWait'>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+            │      │    └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+            │      └ <selenium.webdriver.support.wait.WebDriverWait (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+            └ <function presence_of_element_located.<locals>._predicate at 0x7fe38d435800>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 82, in _predicate
+    return driver.find_element(*locator)
+           │      │             └ ('id', ':r3:')
+           │      └ <function WebDriver.find_element at 0x7fe38d479ee0>
+           └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '[id=":r3:"]'
+           │    │       │       │                       └ 'css selector'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7fe38d478ae0>
+           └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\nfrom u...
+    │    │             └ <function ErrorHandler.check_response at 0x7fe38d611260>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fe38cd0d290>
+    └ <undetected_chromedriver.Chrome (session="3f62ff411e64a9cfbed4f92c0b7f66e8")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x5630e09714e3 <unknown>', '#1 0x5630e06a0c76 <unknown>', '#2 0x5630e067ac6c <unknown>', '#3 0x5630e0700f8f <unknown>', ...
+          │               │        └ None
+          │               └ 'no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.NoSuchWindowException'>
+
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x5630e09714e3 <unknown>
+#1 0x5630e06a0c76 <unknown>
+#2 0x5630e067ac6c <unknown>
+#3 0x5630e0700f8f <unknown>
+#4 0x5630e0713d66 <unknown>
+#5 0x5630e06fbde3 <unknown>
+#6 0x5630e06d12dd <unknown>
+#7 0x5630e06d234e <unknown>
+#8 0x5630e09313e4 <unknown>
+#9 0x5630e09353d7 <unknown>
+#10 0x5630e093fb20 <unknown>
+#11 0x5630e0936023 <unknown>
+#12 0x5630e09041aa <unknown>
+#13 0x5630e095a6b8 <unknown>
+#14 0x5630e095a847 <unknown>
+#15 0x5630e096a243 <unknown>
+#16 0x7f96a79dc609 start_thread
+
+2023-08-20T12:45:46.581191+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:45:46.585151+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:47:14.506097+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:48:32.701477+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:48:37.702177+0200 INFO Found Opus login code: 176257[MAIN.PY]
+2023-08-20T12:49:29.907076+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:49:29.911527+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:54:40.114620+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T12:55:44.663994+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T12:55:49.664814+0200 INFO Found Opus login code: 909842[MAIN.PY]
+2023-08-20T12:57:37.457833+0200 ERROR Main script ended work with exception: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x56461a6494e3 <unknown>
+#1 0x56461a378c76 <unknown>
+#2 0x56461a352c6c <unknown>
+#3 0x56461a3d8f8f <unknown>
+#4 0x56461a3ebd66 <unknown>
+#5 0x56461a3d3de3 <unknown>
+#6 0x56461a3a92dd <unknown>
+#7 0x56461a3aa34e <unknown>
+#8 0x56461a6093e4 <unknown>
+#9 0x56461a60d3d7 <unknown>
+#10 0x56461a617b20 <unknown>
+#11 0x56461a60e023 <unknown>
+#12 0x56461a5dc1aa <unknown>
+#13 0x56461a6326b8 <unknown>
+#14 0x56461a632847 <unknown>
+#15 0x56461a642243 <unknown>
+#16 0x7f12dfa6a609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fd6cda4dda0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fd6cbf685e0>
+    └ <opus_fetcher.Fetcher object at 0x7fd6cbf05c10>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 200, in download_videos
+    _ = WebDriverWait(self.driver, TIMEOUT, ignored_exceptions=resources.IGNORED_EXCEPTIONS).until(EC.presence_of_element_located((By.XPATH, '//button[text()="Download"]')))
+        │             │    │       │                           │         │                         │  │                            │  └ 'xpath'
+        │             │    │       │                           │         │                         │  │                            └ <class 'selenium.webdriver.common.by.By'>
+        │             │    │       │                           │         │                         │  └ <function presence_of_element_located at 0x7fd6cc0622a0>
+        │             │    │       │                           │         │                         └ <module 'selenium.webdriver.support.expected_conditions' from '/home/isfluder/.local/lib/python3.11/site-packages/selenium/we...
+        │             │    │       │                           │         └ (<class 'selenium.common.exceptions.NoSuchElementException'>, <class 'selenium.common.exceptions.StaleElementReferenceExcepti...
+        │             │    │       │                           └ <module 'resources' from '/home/isfluder/Desktop/automated-yt-upload/resources.py'>
+        │             │    │       └ 20
+        │             │    └ <undetected_chromedriver.Chrome (session="a5e2c101ab4506b1d444241c97ad65e9")>
+        │             └ <opus_fetcher.Fetcher object at 0x7fd6cbf05c10>
+        └ <class 'selenium.webdriver.support.wait.WebDriverWait'>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+            │      │    └ <undetected_chromedriver.Chrome (session="a5e2c101ab4506b1d444241c97ad65e9")>
+            │      └ <selenium.webdriver.support.wait.WebDriverWait (session="a5e2c101ab4506b1d444241c97ad65e9")>
+            └ <function presence_of_element_located.<locals>._predicate at 0x7fd6cbf80400>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 82, in _predicate
+    return driver.find_element(*locator)
+           │      │             └ ('xpath', '//button[text()="Download"]')
+           │      └ <function WebDriver.find_element at 0x7fd6cbfc9ee0>
+           └ <undetected_chromedriver.Chrome (session="a5e2c101ab4506b1d444241c97ad65e9")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '//button[text()="Download"]'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7fd6cbfc8ae0>
+           └ <undetected_chromedriver.Chrome (session="a5e2c101ab4506b1d444241c97ad65e9")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\nfrom u...
+    │    │             └ <function ErrorHandler.check_response at 0x7fd6cc161260>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fd6cbf7d150>
+    └ <undetected_chromedriver.Chrome (session="a5e2c101ab4506b1d444241c97ad65e9")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x56461a6494e3 <unknown>', '#1 0x56461a378c76 <unknown>', '#2 0x56461a352c6c <unknown>', '#3 0x56461a3d8f8f <unknown>', ...
+          │               │        └ None
+          │               └ 'no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=114.0.5735.133)'
+          └ <class 'selenium.common.exceptions.NoSuchWindowException'>
+
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+#0 0x56461a6494e3 <unknown>
+#1 0x56461a378c76 <unknown>
+#2 0x56461a352c6c <unknown>
+#3 0x56461a3d8f8f <unknown>
+#4 0x56461a3ebd66 <unknown>
+#5 0x56461a3d3de3 <unknown>
+#6 0x56461a3a92dd <unknown>
+#7 0x56461a3aa34e <unknown>
+#8 0x56461a6093e4 <unknown>
+#9 0x56461a60d3d7 <unknown>
+#10 0x56461a617b20 <unknown>
+#11 0x56461a60e023 <unknown>
+#12 0x56461a5dc1aa <unknown>
+#13 0x56461a6326b8 <unknown>
+#14 0x56461a632847 <unknown>
+#15 0x56461a642243 <unknown>
+#16 0x7f12dfa6a609 start_thread
+
+2023-08-20T12:57:38.447845+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:57:38.449411+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:58:25.351529+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T12:58:25.356478+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T12:59:47.338189+0200 INFO Bad proxy! Searching for new one...(1)[MAIN.PY]
+2023-08-20T13:00:03.651076+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:01:27.474200+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:01:32.474937+0200 INFO Found Opus login code: 671412[MAIN.PY]
+2023-08-20T13:02:25.026016+0200 INFO Finished downloading![MAIN.PY]
+2023-08-20T13:02:31.657313+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:02:31.663477+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:04:52.985245+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:05:44.738986+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:05:49.739699+0200 INFO Found Opus login code: 982364[MAIN.PY]
+2023-08-20T13:06:39.455077+0200 INFO Finished downloading![MAIN.PY]
+2023-08-20T13:06:46.507162+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:06:46.512146+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:08:31.743774+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:08:31.748800+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:08:51.318153+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:09:48.252246+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:09:53.253045+0200 INFO Found Opus login code: 681976[MAIN.PY]
+2023-08-20T13:10:43.862992+0200 ERROR Main script ended work with exception: 'list' object has no attribute 'click'[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f6679d4dda0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f66782685e0>
+    └ <opus_fetcher.Fetcher object at 0x7f66781b41d0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 202, in download_videos
+    element.click()
+    └ []
+
+AttributeError: 'list' object has no attribute 'click'
+2023-08-20T13:10:50.402260+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:10:50.408551+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:13:43.916845+0200 INFO Bad proxy! Searching for new one...(1)[MAIN.PY]
+2023-08-20T13:14:06.044302+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:15:00.853223+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:15:05.853957+0200 INFO Found Opus login code: 770503[MAIN.PY]
+2023-08-20T13:16:03.912307+0200 ERROR Main script ended work with exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5595891744e3 <unknown>
+#1 0x559588ea3c76 <unknown>
+#2 0x559588edfc96 <unknown>
+#3 0x559588edfdc1 <unknown>
+#4 0x559588f197f4 <unknown>
+#5 0x559588eff03d <unknown>
+#6 0x559588f1730e <unknown>
+#7 0x559588efede3 <unknown>
+#8 0x559588ed42dd <unknown>
+#9 0x559588ed534e <unknown>
+#10 0x5595891343e4 <unknown>
+#11 0x5595891383d7 <unknown>
+#12 0x559589142b20 <unknown>
+#13 0x559589139023 <unknown>
+#14 0x5595891071aa <unknown>
+#15 0x55958915d6b8 <unknown>
+#16 0x55958915d847 <unknown>
+#17 0x55958916d243 <unknown>
+#18 0x7f967cfd0609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7f66b58d9da0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7f66b3df4540>
+    └ <opus_fetcher.Fetcher object at 0x7f66b3d60cd0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 196, in download_videos
+    element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div['+str(count)+']/div[2]/div/div/div/div/div[2]/div[2]/button')
+              │    │      │            │  │                                                                     └ 1
+              │    │      │            │  └ 'xpath'
+              │    │      │            └ <class 'selenium.webdriver.common.by.By'>
+              │    │      └ <function WebDriver.find_element at 0x7f66b3e55e40>
+              │    └ <undetected_chromedriver.Chrome (session="be1977578d8fadb0bade821abc4250fe")>
+              └ <opus_fetcher.Fetcher object at 0x7f66b3d60cd0>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7f66b3e54a40>
+           └ <undetected_chromedriver.Chrome (session="be1977578d8fadb0bade821abc4250fe")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\\"metho...
+    │    │             └ <function ErrorHandler.check_response at 0x7f66b3fed1c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f66b3e0bbd0>
+    └ <undetected_chromedriver.Chrome (session="be1977578d8fadb0bade821abc4250fe")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x5595891744e3 <unknown>', '#1 0x559588ea3c76 <unknown>', '#2 0x559588edfc96 <unknown>', '#3 0x559588edfdc1 <unknown>', ...
+          │               │        └ None
+          │               └ 'no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]...
+          └ <class 'selenium.common.exceptions.NoSuchElementException'>
+
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5595891744e3 <unknown>
+#1 0x559588ea3c76 <unknown>
+#2 0x559588edfc96 <unknown>
+#3 0x559588edfdc1 <unknown>
+#4 0x559588f197f4 <unknown>
+#5 0x559588eff03d <unknown>
+#6 0x559588f1730e <unknown>
+#7 0x559588efede3 <unknown>
+#8 0x559588ed42dd <unknown>
+#9 0x559588ed534e <unknown>
+#10 0x5595891343e4 <unknown>
+#11 0x5595891383d7 <unknown>
+#12 0x559589142b20 <unknown>
+#13 0x559589139023 <unknown>
+#14 0x5595891071aa <unknown>
+#15 0x55958915d6b8 <unknown>
+#16 0x55958915d847 <unknown>
+#17 0x55958916d243 <unknown>
+#18 0x7f967cfd0609 start_thread
+
+2023-08-20T13:16:14.228963+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:16:14.237412+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:18:27.881368+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:19:35.486550+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:19:40.487178+0200 INFO Found Opus login code: 385648[MAIN.PY]
+2023-08-20T13:20:06.373876+0200 ERROR Main script ended work with exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55587c6874e3 <unknown>
+#1 0x55587c3b6c76 <unknown>
+#2 0x55587c3f2c96 <unknown>
+#3 0x55587c3f2dc1 <unknown>
+#4 0x55587c42c7f4 <unknown>
+#5 0x55587c41203d <unknown>
+#6 0x55587c42a30e <unknown>
+#7 0x55587c411de3 <unknown>
+#8 0x55587c3e72dd <unknown>
+#9 0x55587c3e834e <unknown>
+#10 0x55587c6473e4 <unknown>
+#11 0x55587c64b3d7 <unknown>
+#12 0x55587c655b20 <unknown>
+#13 0x55587c64c023 <unknown>
+#14 0x55587c61a1aa <unknown>
+#15 0x55587c6706b8 <unknown>
+#16 0x55587c670847 <unknown>
+#17 0x55587c680243 <unknown>
+#18 0x7f2473f17609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fbcc5a15da0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fbcc3a10540>
+    └ <opus_fetcher.Fetcher object at 0x7fbcc3990cd0>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 193, in download_videos
+    element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div['+str(count)+']/div[2]/div/div/div/div/div[2]/div[2]/button')
+              │    │      │            │  │                                                                     └ 1
+              │    │      │            │  └ 'xpath'
+              │    │      │            └ <class 'selenium.webdriver.common.by.By'>
+              │    │      └ <function WebDriver.find_element at 0x7fbcc4161e40>
+              │    └ <undetected_chromedriver.Chrome (session="d16828986b0c24898459840eb925044f")>
+              └ <opus_fetcher.Fetcher object at 0x7fbcc3990cd0>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7fbcc4160a40>
+           └ <undetected_chromedriver.Chrome (session="d16828986b0c24898459840eb925044f")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\\"metho...
+    │    │             └ <function ErrorHandler.check_response at 0x7fbcc41011c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fbcc3a25990>
+    └ <undetected_chromedriver.Chrome (session="d16828986b0c24898459840eb925044f")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55587c6874e3 <unknown>', '#1 0x55587c3b6c76 <unknown>', '#2 0x55587c3f2c96 <unknown>', '#3 0x55587c3f2dc1 <unknown>', ...
+          │               │        └ None
+          │               └ 'no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]...
+          └ <class 'selenium.common.exceptions.NoSuchElementException'>
+
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55587c6874e3 <unknown>
+#1 0x55587c3b6c76 <unknown>
+#2 0x55587c3f2c96 <unknown>
+#3 0x55587c3f2dc1 <unknown>
+#4 0x55587c42c7f4 <unknown>
+#5 0x55587c41203d <unknown>
+#6 0x55587c42a30e <unknown>
+#7 0x55587c411de3 <unknown>
+#8 0x55587c3e72dd <unknown>
+#9 0x55587c3e834e <unknown>
+#10 0x55587c6473e4 <unknown>
+#11 0x55587c64b3d7 <unknown>
+#12 0x55587c655b20 <unknown>
+#13 0x55587c64c023 <unknown>
+#14 0x55587c61a1aa <unknown>
+#15 0x55587c6706b8 <unknown>
+#16 0x55587c670847 <unknown>
+#17 0x55587c680243 <unknown>
+#18 0x7f2473f17609 start_thread
+
+2023-08-20T13:20:52.111593+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:21:38.019614+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:21:43.020351+0200 INFO Found Opus login code: 569205[MAIN.PY]
+2023-08-20T13:22:09.432568+0200 ERROR Main script ended work with exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b38fa304e3 <unknown>
+#1 0x55b38f75fc76 <unknown>
+#2 0x55b38f79bc96 <unknown>
+#3 0x55b38f79bdc1 <unknown>
+#4 0x55b38f7d57f4 <unknown>
+#5 0x55b38f7bb03d <unknown>
+#6 0x55b38f7d330e <unknown>
+#7 0x55b38f7bade3 <unknown>
+#8 0x55b38f7902dd <unknown>
+#9 0x55b38f79134e <unknown>
+#10 0x55b38f9f03e4 <unknown>
+#11 0x55b38f9f43d7 <unknown>
+#12 0x55b38f9feb20 <unknown>
+#13 0x55b38f9f5023 <unknown>
+#14 0x55b38f9c31aa <unknown>
+#15 0x55b38fa196b8 <unknown>
+#16 0x55b38fa19847 <unknown>
+#17 0x55b38fa29243 <unknown>
+#18 0x7f76b2cba609 start_thread
+[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 69, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fbcc5a15da0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 38, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fbcc3a10540>
+    └ <opus_fetcher.Fetcher object at 0x7fbcc409e610>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 193, in download_videos
+    element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div['+str(count)+']/div[2]/div/div/div/div/div[2]/div[2]/button')
+              │    │      │            │  │                                                                     └ 1
+              │    │      │            │  └ 'xpath'
+              │    │      │            └ <class 'selenium.webdriver.common.by.By'>
+              │    │      └ <function WebDriver.find_element at 0x7fbcc4161e40>
+              │    └ <undetected_chromedriver.Chrome (session="62605686d79f1dfcf94a180a48359441")>
+              └ <opus_fetcher.Fetcher object at 0x7fbcc409e610>
+
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           │    │       │       │                       │            └ '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button'
+           │    │       │       │                       └ 'xpath'
+           │    │       │       └ 'findElement'
+           │    │       └ <class 'selenium.webdriver.remote.command.Command'>
+           │    └ <function WebDriver.execute at 0x7fbcc4160a40>
+           └ <undetected_chromedriver.Chrome (session="62605686d79f1dfcf94a180a48359441")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\\"metho...
+    │    │             └ <function ErrorHandler.check_response at 0x7fbcc41011c0>
+    │    └ <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fbcc3a57bd0>
+    └ <undetected_chromedriver.Chrome (session="62605686d79f1dfcf94a180a48359441")>
+  File "/home/isfluder/.local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ ['#0 0x55b38fa304e3 <unknown>', '#1 0x55b38f75fc76 <unknown>', '#2 0x55b38f79bc96 <unknown>', '#3 0x55b38f79bdc1 <unknown>', ...
+          │               │        └ None
+          │               └ 'no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]...
+          └ <class 'selenium.common.exceptions.NoSuchElementException'>
+
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/button"}
+  (Session info: chrome=114.0.5735.133); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b38fa304e3 <unknown>
+#1 0x55b38f75fc76 <unknown>
+#2 0x55b38f79bc96 <unknown>
+#3 0x55b38f79bdc1 <unknown>
+#4 0x55b38f7d57f4 <unknown>
+#5 0x55b38f7bb03d <unknown>
+#6 0x55b38f7d330e <unknown>
+#7 0x55b38f7bade3 <unknown>
+#8 0x55b38f7902dd <unknown>
+#9 0x55b38f79134e <unknown>
+#10 0x55b38f9f03e4 <unknown>
+#11 0x55b38f9f43d7 <unknown>
+#12 0x55b38f9feb20 <unknown>
+#13 0x55b38f9f5023 <unknown>
+#14 0x55b38f9c31aa <unknown>
+#15 0x55b38fa196b8 <unknown>
+#16 0x55b38fa19847 <unknown>
+#17 0x55b38fa29243 <unknown>
+#18 0x7f76b2cba609 start_thread
+
+2023-08-20T13:22:11.875127+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:22:11.880789+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:24:42.124462+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:24:42.130335+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:25:37.497037+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:26:28.389437+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:26:33.390200+0200 INFO Found Opus login code: 444330[MAIN.PY]
+2023-08-20T13:26:59.814490+0200 ERROR Main script ended work with exception: can only concatenate str (not "int") to str[MAIN.PY]
+Traceback (most recent call last):
+
+  File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 68, in <module>
+    run(['https://youtu.be/7doXTqVp16g'])
+    └ <function run at 0x7fe4725d9da0>
+
+> File "/home/isfluder/Desktop/automated-yt-upload/sequence.py", line 37, in run
+    fetcher.download_videos(url=link)
+    │       │                   └ 'https://clip.opus.pro/clip/P00817160Pj6'
+    │       └ <function Fetcher.download_videos at 0x7fe470af4540>
+    └ <opus_fetcher.Fetcher object at 0x7fe470a74990>
+
+  File "/home/isfluder/Desktop/automated-yt-upload/opus_fetcher.py", line 194, in download_videos
+    element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div['+count+']/div[2]/div/div/div/div/div[2]/div[2]/a')
+              │    │      │            │  │                                                                 └ 1
+              │    │      │            │  └ 'xpath'
+              │    │      │            └ <class 'selenium.webdriver.common.by.By'>
+              │    │      └ <function WebDriver.find_element at 0x7fe470b55e40>
+              │    └ <undetected_chromedriver.Chrome (session="e60c8ea29802c3ecd3c6cd7113d34d47")>
+              └ <opus_fetcher.Fetcher object at 0x7fe470a74990>
+
+TypeError: can only concatenate str (not "int") to str
+2023-08-20T13:27:30.328232+0200 INFO Bad proxy! Searching for new one...(1)[MAIN.PY]
+2023-08-20T13:27:51.938899+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:27:54.591545+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:27:54.596684+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:29:05.728806+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:31:54.891779+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:31:54.896601+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:32:16.053621+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:34:05.081176+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:34:05.087012+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:34:23.513058+0200 INFO Link aquired! https://clip.opus.pro/clip/P00817160Pj6[MAIN.PY]
+2023-08-20T13:35:08.582674+0200 INFO Started listening to verification code email.[MAIN.PY]
+2023-08-20T13:35:13.583432+0200 INFO Found Opus login code: 990887[MAIN.PY]
+2023-08-20T13:39:39.770965+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:39:39.779530+0200 INFO Work finished! shutting off...[MAIN.PY]
+2023-08-20T13:39:45.149721+0200 ERROR Interrupted[MAIN.PY]
+2023-08-20T13:39:45.154388+0200 INFO Work finished! shutting off...[MAIN.PY]
