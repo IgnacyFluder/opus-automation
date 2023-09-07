@@ -139,6 +139,5 @@ class Reel:
         response = requests.get(url,params=param)
         response = response.json()
         return response
-    
-r = Reel('24045900618357273', 'e28962a6ef28942c9d5533f28cf7425e', 'https://www.facebook.com/v17.0/dialog/oauth?response_type=token&display=popup&client_id=24045900618357273&redirect_uri=http://localhost&auth_type=rerequest&scope=pages_show_list%2Cinstagram_basic%2Cinstagram_manage_comments%2Cinstagram_manage_insights%2Cinstagram_content_publish%2Cinstagram_manage_messages%2Cpages_read_engagement%2Cpages_manage_metadata%2Cpublic_profile')
+
 r.reels_post_video('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'First post using IG Graph api and python! ATTENTION: THIS VIDEO IS NOT INTENDED FOR COPYRIGHT ABUSE ITS JUST A WAY TO TEST OUR SYSTEM!')
