@@ -4,15 +4,15 @@ from loguru import logger
 import os
 import time
 import platform
-import yogopy
-
+import uploader
+#import yogopy
 
 if platform.system() == "Linux":
     os.system("clear")
 else:
     os.system('cls')
 
-logger.info("Welcome to the OPUS.PRO account generator")
+logger.info("Welcome to the OPUS.PRO auto uploader!")
 
 logger.add("./loguru.log", format="{time} {level} {message}[MAIN.PY]", level="INFO")
 
@@ -38,8 +38,9 @@ def run(vids:list):
 
             fetcher.download_videos(url=link)
             time.sleep(3)
-            logger.success("Finished registering!")
-
+            logger.success("Finished link harvesting!")
+            logger.info("Video upload started...")
+            logger.warning("Upload proccess does not have any error handling yet !")
             logger.success("Task NO. "+str(times+1)+" finished!")
 
         except UnboundLocalError:

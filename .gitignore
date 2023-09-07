@@ -2,6 +2,7 @@
 pusher.py
 temp/
 client_secret.json
+fb_secret.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

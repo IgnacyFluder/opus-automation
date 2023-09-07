@@ -44,7 +44,6 @@ class Fetcher:
         logger.debug("[OPUS_FETCHER.PY] running with the following settings: TIMEOUT="+str(TIMEOUT)+", PROXY_TYPE="+str(PROXY_TYPE)+", PAID_PROXY_BACKBONE="+str(PAID_PROXY_BACKBONE)+", DO_SLEEP="+str(DO_SLEEP))
         
         self.wish = None
-        self.email = "moms-are-hot999@yopmail.com"
 
     def init(self):
         count = 1
@@ -64,7 +63,7 @@ class Fetcher:
                 self.driver = chromedriver.Chrome(headless=False,use_subprocess=False, options=self.opt)
                 self.driver.get('https://clip.opus.pro/dashboard?utm_source=opus')
                 
-                #not sure why this fixes it but it does
+                # Detecting if ip had been blocked
                 try:
                     element = WebDriverWait(self.driver, 5, ignored_exceptions=resources.IGNORED_EXCEPTIONS).until(EC.presence_of_element_located((By.XPATH, '//button[text()="Have questions?"]')))
                     element.click()
@@ -191,6 +190,7 @@ class Fetcher:
                 break
             count += 1
         
+        """
         dir_ = './temp/'+str(random.randint(0,100000000))
         os.mkdir(dir_)
 
@@ -198,15 +198,9 @@ class Fetcher:
         for link in link_list:
             urllib.request.urlretrieve(link, (dir_+"/"+link.split('/')[-1]).replace('%20', ' '))
             if DO_SLEEP: time.sleep(2+(random.randint(0,200)/100))
-        
         logger.info("Path with videos: "+ dir_)
+        """
         logger.info("Finished downloading!")
         self.driver.close()
 
-
-        #self.driver.find_elements(By.XPATH, '//button[text()="Download"]')
-
-fetcher = Fetcher()
-fetcher.download_videos('https://clip.opus.pro/clip/P00816122thP?utm_source=opus')
-
-##__next > div > div > div > div > div > div.MuiStack-root.css-gojse6 > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedSecondary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-root.MuiButton-contained.MuiButton-containedSecondary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.css-1q5zgi7
+        return link_list
