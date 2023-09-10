@@ -10,19 +10,9 @@ import time
 from fp.fp import FreeProxy
 from loguru import logger
 import random
-import os
-import urllib.request
 from selenium.webdriver.common.keys import Keys
-import mail_system, yogopy
-
-######################################################################
-#timeout should be high for slow proxies such as the free ones i used#
-TIMEOUT = 25#30 #in seconds(rec. for paid: 20, rec. for free: 30)#####
-PROXY_TYPE = "paid"#"free" options are: "paid"(recommended) or "free"#
-PAID_PROXY_BACKBONE = "p.webshare.io:9999"#leave blank for free proxy#
-DO_SLEEP = True#leave true for most uses, changing to false sometimes#
-#raises unwanted exceptions###########################################
-######################################################################
+import yogopy
+from resources import TIMEOUT, PROXY_TYPE, PAID_PROXY_BACKBONE, DO_SLEEP
 
 
 def search_for_element_and_click(browser ,by, selector, _=None):
@@ -37,15 +27,14 @@ def search_for_element_and_send_keys(browser ,by, selector, input_):
     element.click()
     element.send_keys(input_)
     
-    
 
 class Fetcher:
     def __init__(self):
         logger.debug("[OPUS_FETCHER.PY] running with the following settings: TIMEOUT="+str(TIMEOUT)+", PROXY_TYPE="+str(PROXY_TYPE)+", PAID_PROXY_BACKBONE="+str(PAID_PROXY_BACKBONE)+", DO_SLEEP="+str(DO_SLEEP))
-        
+        self.email = 'aspiringlycracknel2004@yopmail.com'
         self.wish = None
 
-    def init(self):
+    def init(self, headless=False):
         count = 1
         while True:
             try:
@@ -60,7 +49,7 @@ class Fetcher:
                 self.opt = Options()
                 self.opt.add_argument("--proxy-server="+self.proxy)
 
-                self.driver = chromedriver.Chrome(headless=False,use_subprocess=False, options=self.opt)
+                self.driver = chromedriver.Chrome(headless=headless, options=self.opt)
                 self.driver.get('https://clip.opus.pro/dashboard?utm_source=opus')
                 
                 # Detecting if ip had been blocked
@@ -124,11 +113,13 @@ class Fetcher:
         #Click on free trial acceptance button
         search_for_element_and_click(self.driver, By.XPATH, '//button[text()="Start clipping"]')
         #insert yt link
+        time.sleep(5)
         search_for_element_and_send_keys(self.driver, By.ID, ':r5:', yt_link)
         #Select lenght
         search_for_element_and_click(self.driver, By.XPATH, '//button[text()="'+lenght+'"]')
         #Click on submit button
         search_for_element_and_click(self.driver, By.XPATH, '//*[@id="__next"]/div/div/div/div/div/div/div[1]/div/div[1]/div/div/div[2]/button')
+        time.sleep(10)
         logger.info('Tracking url: '+self.driver.current_url)
         self.driver.close()
     
@@ -140,7 +131,7 @@ class Fetcher:
         self.opt = Options()
         self.opt.add_argument("--proxy-server=p.webshare.io:9999")
 
-        self.driver = chromedriver.Chrome(headless=headless, use_subprocess=False, options=self.opt)
+        self.driver = chromedriver.Chrome(headless=headless, options=self.opt)
         self.driver.get(url)
 
         #not sure why this fixes it but it does
@@ -204,3 +195,7 @@ class Fetcher:
         self.driver.close()
 
         return link_list
+    
+if __name__ == "__main__":
+    f = Fetcher()
+    f.download_videos('')

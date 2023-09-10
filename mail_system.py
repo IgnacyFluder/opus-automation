@@ -18,3 +18,7 @@ def get_inbox():
     logger.debug('Email used: '+input_email)
 
     return inbox, input_email
+
+if __name__ == "__name__":
+    inbox = get_inbox()[0]
+    inbox.listen_for_verification_code()
