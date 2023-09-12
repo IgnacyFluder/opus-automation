@@ -1,6 +1,6 @@
 # OPUS AUTOMATION
-# WARNING: I DO NOT CONDONE USAGE OF THIS SOFTWARE
-# WARNING: FOR EDUCATIONAL PURPOSES ONLY!!!!!
+## WARNING: I DO NOT CONDONE USAGE OF THIS SOFTWARE
+## WARNING: FOR EDUCATIONAL PURPOSES ONLY!!!!!
 Automate the process of downloading and uploading opus.pro videos to yt shorts
 
 For the moment only windows is supported
